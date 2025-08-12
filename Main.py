@@ -4,7 +4,6 @@ import TrigFunctions as t
 import ComplexFunctions as c
 import ShapesFunctions as sh
 import PrimeFunctions as pr
-import AIFunctions as ai
 
 def listen():
     return input("Type your command: ").lower().strip()
@@ -73,16 +72,12 @@ command_map = {
     'fermat': pr.fermat_primes,
     'prime factors': pr.prime_factors,
 
-    'human_ai':ai.Human_to_AI_Chat,
-    'ai_ai':ai.AI_to_AI_Chat,
-
     'help': lambda: print_help(),
     'trig': lambda: print_trig(),
     'log': lambda: print_log(),
     'complex': lambda: print_complex(),
     'shapes': lambda: print_shapes(),
     'primes': lambda: print_primes(),
-    'ai': lambda: print_AI()
 }
 
 def exit_message():
@@ -108,9 +103,6 @@ def print_shapes():
 def print_primes():
     print("Primes: normal, mersenne, factorial, additive, prue, twin, fermat, prime factors")
 
-def print_AI():
-    print("AI: human_ai, ai_ai")
-
 flag = True
 if __name__ == "__main__":
  while flag:
@@ -120,3 +112,4 @@ if __name__ == "__main__":
         action()
     else:
         print("Sorry, I didn't understand that. Type '?' or 'help' for options.")
+
